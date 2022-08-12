@@ -1,9 +1,75 @@
-div#footer {
-	position:fixed;
-	bottom:0px;
-	left:0px;
-	width:100%;
-	color:#CCC;
-	background:#333;
-	padding:8px;
+.header {
+	top: 0;
+	height: 60px;
+	background-color: rgb(255, 175, 189);
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	filter: drop-shadow(2px 2px 2px rgb(255, 92, 119));
+}
+
+.headerright {
+	display: flex;
+	flex-direction: row;
+	padding-right: 10px;
+	padding-top: 15px;
+}
+
+.headerrightcontainer {
+	display: flex;
+	flex-direction: row;
+	padding-right: 15px;
+}
+
+.headerleft {
+	padding-left: 25px;
+}
+
+.header a, a:hover, a:focus, a:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+body {
+	background-image: repeating-linear-gradient(
+		90deg,
+		white,
+		white 20px,
+		pink 20px,
+		pink 40px
+	);
+}
+
+.card {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: pink;
+	margin-top: 50px;
+	min-height: 500px;
+	filter: drop-shadow(2px 2px 2px rgb(255, 92, 119));
+}
+
+.card a, a:hover, a:focus, a:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer {
+  bottom: 0;
+  position: fixed;
+  display: flex;
+	align-items: flex-start;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(255, 175, 189);
+	color: white;
+  padding-top: 20px;
+	padding-left: 20px;
 }

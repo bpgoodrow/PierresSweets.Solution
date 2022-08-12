@@ -7,6 +7,40 @@
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
-    @RenderBody()
+    <div class="header">
+      <div class="headerleft">
+        <div class="headercontainer">
+          <h1>@Html.ActionLink("Pierre's Sweets", "Index", "Home")</h1>
+        </div>
+      </div>
+      <div class="headerright">
+        <div class="headerrightcontainer">
+          <p>@Html.ActionLink("Treats", "Index", "Treats")</p>
+        </div>
+        <div class="headerrightcontainer">
+          <p>@Html.ActionLink("Flavors", "Index", "Flavors")</p>
+        </div>
+        <div class="headerrightcontainer">
+          <p>@Html.ActionLink("Account", "Index", "Account")</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-6">
+          <div class="card">
+            @RenderBody()
+          </div>
+        </div>
+        <div class="col">
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© 2022 Pierre's Sweets. All Rights Reserved.</p>
+    </div>
   </body>
 </html>
