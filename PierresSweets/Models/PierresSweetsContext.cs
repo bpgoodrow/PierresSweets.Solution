@@ -1,15 +1,15 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace ToDoList.Models
+namespace PierresSweets.Models
 {
-  public class ToDoListContext : IdentityDbContext<ApplicationUser>
+  public class PierresSweetsContext : IdentityDbContext<ApplicationUser>
   {
-    public DbSet<Category> Categories { get; set; }
-    public DbSet<Item> Items { get; set; }
-    public DbSet<CategoryItem> CategoryItem { get; set; }
+    public DbSet<Flavor> Flavors { get; set; }
+    public DbSet<Treat> Treats { get; set; }
+    public DbSet<FlavorTreat> FlavorTreat { get; set; }
 
-    public ToDoListContext(DbContextOptions options) : base(options) { }
+    public PierresSweetsContext(DbContextOptions options) : base(options) { }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

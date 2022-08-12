@@ -3,23 +3,23 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace ToDoList.Models
+namespace PierresSweets.Models
 {
-  public class ToDoListContextFactory : IDesignTimeDbContextFactory<ToDoListContext>
+  public class PierresSweetsContextFactory : IDesignTimeDbContextFactory<PierresSweetsContext>
   {
 
-    ToDoListContext IDesignTimeDbContextFactory<ToDoListContext>.CreateDbContext(string[] args)
+    PierresSweetsContext IDesignTimeDbContextFactory<PierresSweetsContext>.CreateDbContext(string[] args)
     {
       IConfigurationRoot configuration = new ConfigurationBuilder()
           .SetBasePath(Directory.GetCurrentDirectory())
           .AddJsonFile("appsettings.json")
           .Build();
 
-      var builder = new DbContextOptionsBuilder<ToDoListContext>();
+      var builder = new DbContextOptionsBuilder<PierresSweetsContext>();
 
       builder.UseMySql(configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(configuration["ConnectionStrings:DefaultConnection"]));
 
-      return new ToDoListContext(builder.Options);
+      return new PierresSweetsContext(builder.Options);
     }
   }
 }

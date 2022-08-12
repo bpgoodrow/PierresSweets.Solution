@@ -1,14 +1,10 @@
-@{
-  Layout = "_Layout";
-}
-
-@model ToDoList.Models.Category
+@model PierresSweets.Models.Flavor
 
 <h4>Add a new task</h4>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
-  <input type="submit" value="Add new category" />
+  @Html.LabelFor(model => model.FlavorName)
+  @Html.TextBoxFor(model => model.FlavorName)
+  <input type="submit" value="Add new flavor" />
 }
 <p>@Html.ActionLink("Show all categories", "Index")</p>

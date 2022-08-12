@@ -1,35 +1,31 @@
-@{
-  Layout = "_Layout";
-}
+@model PierresSweets.Models.Treat
 
-@model ToDoList.Models.Item
-
-<h2>Item Details</h2>
+<h2>Treat Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3>
+<h3>@Html.DisplayNameFor(model => model.TreatName): @Html.DisplayFor(model => model.TreatName)</h3>
 
 @if(@Model.JoinEntities.Count == 0)
 {
-  <p>This item does not belong to any categories</p>
+  <p>This treat does not belong to any categories</p>
 }
 else
 {
-  <h4>Categories the item belongs to:</h4>
+  <h4>Categories the treat belongs to:</h4>
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
-    <li>@join.Category.Name</li>
-    @using (Html.BeginForm("DeleteCategory", "Items"))
+    <li>@join.Flavor.FlavorName</li>
+    @using (Html.BeginForm("DeleteFlavor", "Treats"))
     {
-      @Html.Hidden("joinId", @join.CategoryItemId)
+      @Html.Hidden("joinId", @join.FlavorTreatId)
       <input type="submit" value="Delete"/>
     }
   }
   </ul>
 }
 
-<p>@Html.ActionLink("Add a Category", "AddCategory", new { id = Model.ItemId })</p>
+<p>@Html.ActionLink("Add a Flavor", "AddFlavor", new { id = Model.TreatId })</p>
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.ItemId })</p>
-<p>@Html.ActionLink("Delete Item", "Delete", new { id = Model.ItemId })</p>
+<p>@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</p>
+<p>@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</p>

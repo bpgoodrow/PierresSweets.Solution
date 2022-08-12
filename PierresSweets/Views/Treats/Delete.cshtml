@@ -1,12 +1,8 @@
-@{
-  Layout = "_Layout";
-}
-
-@model ToDoList.Models.Item
+@model PierresSweets.Models.Treat
 
 <h2>Are you sure you want to delete this?</h2>
 
-@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)
+@Html.DisplayNameFor(model => model.TreatName): @Html.DisplayFor(model => model.TreatName)
 @using (Html.BeginForm())
 {
   <input type="submit" value="Delete" />

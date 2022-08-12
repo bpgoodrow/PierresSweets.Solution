@@ -1,4 +1,4 @@
-namespace ToDoList.ViewModels
+namespace PierresSweets.ViewModels
 {
     public class LoginViewModel
     {

@@ -1,18 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using ToDoList.Models;
+using PierresSweets.Models;
 using System.Threading.Tasks;
-using ToDoList.ViewModels;
+using PierresSweets.ViewModels;
 
-namespace ToDoList.Controllers
+namespace PierresSweets.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly ToDoListContext _db;
+        private readonly PierresSweetsContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public AccountController (UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ToDoListContext db)
+        public AccountController (UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, PierresSweetsContext db)
         {
             _userManager = userManager;
             _signInManager = signInManager;
