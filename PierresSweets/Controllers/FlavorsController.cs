@@ -122,5 +122,11 @@ namespace PierresSweets.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    [HttpGet]
+    public ActionResult AllFlavors()
+    {
+    return View(_db.Flavors.ToList());
+    }
   }
 }

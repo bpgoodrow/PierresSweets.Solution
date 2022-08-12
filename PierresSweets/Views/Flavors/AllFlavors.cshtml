@@ -1,0 +1,18 @@
+@using PierresSweets.Models;
+@model IEnumerable<PierresSweets.Models.Flavor>
+
+<h1>All Flavors</h1>
+
+@if (Model.Any())
+{
+  <ul>
+    @foreach (Flavor flavor in Model)
+    {
+      <li>@flavor.FlavorName</li>
+    }
+  </ul>
+} 
+else
+{
+  <h3>No flavors have been added yet!</h3>
+}
