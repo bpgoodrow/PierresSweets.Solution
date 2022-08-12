@@ -2,7 +2,9 @@
 @model IEnumerable<PierresSweets.Models.Treat>
 
 <h2>Treats for:</h2>
-  <h3>@User.Identity.Name</h3>
+<h3>@User.Identity.Name</h3>
+
+<br>
 
 <p>@Html.ActionLink("Add new treat", "Create")</p>
 

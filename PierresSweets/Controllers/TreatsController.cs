@@ -123,7 +123,7 @@ namespace PierresSweets.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpGet]
+    [AllowAnonymous]
     public ActionResult AllTreats()
     {
       return View(_db.Treats.ToList());

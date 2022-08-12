@@ -1,7 +1,9 @@
 @model PierresSweets.Models.Treat
 
 <h2>@Html.DisplayFor(model => model.TreatName) Details</h2>
+
 <br>
+
 <div class="detailsbuttons">
   <div class="buttonobject">
     <p>@Html.ActionLink("Add Flavor to Treat", "AddFlavor", new { id = Model.TreatId })</p>
