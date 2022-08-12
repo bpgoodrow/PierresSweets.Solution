@@ -3,6 +3,7 @@
 	height: 60px;
 	background-color: rgb(255, 175, 189);
 	color: white;
+	text-shadow: 1px 1px 1px rgb(255, 119, 141);
 	display: flex;
 	justify-content: space-between;
 	filter: drop-shadow(2px 2px 2px rgb(255, 92, 119));
@@ -45,6 +46,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	color: pink;
+	text-shadow: 1px 1px 1px rgb(255, 156, 173);
 	margin-top: 50px;
 	min-height: 500px;
 	filter: drop-shadow(2px 2px 2px rgb(255, 92, 119));
@@ -70,6 +72,7 @@ ul {
   height: 70px;
   background-color: rgb(255, 175, 189);
 	color: white;
+	text-shadow: 1px 1px 1px rgb(255, 119, 141);
   padding-top: 20px;
 	padding-left: 20px;
 }

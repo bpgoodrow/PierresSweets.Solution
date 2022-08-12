@@ -1,7 +1,8 @@
 @using PierresSweets.Models;
 @model IEnumerable<PierresSweets.Models.Treat>
 
-<h1>Treats for @User.Identity.Name</h1>
+<h2>Treats for:</h2>
+  <h3>@User.Identity.Name</h3>
 
 <p>@Html.ActionLink("Add new treat", "Create")</p>
 
