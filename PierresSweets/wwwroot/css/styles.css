@@ -46,10 +46,10 @@ body {
 	align-items: center;
 	flex-direction: column;
 	color: pink;
-	text-shadow: 1px 1px 1px rgb(255, 156, 173);
 	margin-top: 50px;
 	min-height: 500px;
 	filter: drop-shadow(2px 2px 2px rgb(255, 92, 119));
+	padding-top: 10px;
 }
 
 .card a, a:hover, a:focus, a:active {
@@ -75,4 +75,16 @@ ul {
 	text-shadow: 1px 1px 1px rgb(255, 119, 141);
   padding-top: 20px;
 	padding-left: 20px;
+}
+
+.buttonobject {
+	margin: 10px;
+	margin-top: 20px;
+}
+
+.detailsbuttons {
+	border-top: solid 2px pink;
+	border-bottom: solid 2px pink;
+	display: flex;
+	justify-items: space-between;
 }
